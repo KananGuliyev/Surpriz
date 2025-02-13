@@ -71,6 +71,12 @@
             font-size: 20px;
             color: #ff4d6a;
         }
+        .message-container img {
+            width: 200px;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
         .show-message {
             transform: translate(-50%, -50%) scale(1);
         }
@@ -83,7 +89,7 @@
             background: rgba(0, 0, 0, 0.5);
             display: none;
         }
-        .music-button {
+        .music-button, .next-section {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
@@ -92,6 +98,16 @@
             border: none;
             border-radius: 10px;
             cursor: pointer;
+            display: block;
+            text-decoration: none;
+        }
+        .hidden-section {
+            display: none;
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
     <script>
@@ -114,6 +130,10 @@
             document.getElementById("messageContainer").classList.remove("show-message");
             document.getElementById("overlay").style.display = "none";
         }
+        function showNextSection() {
+            document.getElementById("hiddenSection").style.display = "block";
+            document.getElementById("nextSectionButton").style.display = "none";
+        }
     </script>
 </head>
 <body>
@@ -123,14 +143,69 @@
         <img src="https://fydn.imgix.net/m%2Fgen%2Fart-print-square-p1%2Ff99bd48c-fdae-4a7d-8dfe-0de5219112be.jpg?auto=format%2Ccompress&q=75&ar=1:1&fit=crop&crop=top&w=1280" alt="Panda və pişik qucaqlayır">
         <p>Sən mənim günəşim, ulduzum, ən gözəl xəyallarımsan. Hər günümü motivasiya edən minnoşş tatlışş kedicikk! 💖</p>
         <p class="heart">💌 Ən böyük hədiyyəmsən güzelllikkk!💌</p>
-        <p class="heart">Əlbəttə, bu sayt da sənə hədiyyəmdir.🤗</p>
+        <p class="heart">Aç bakalım zarfıı🤗</p>
         <div class="envelope" onclick="showMessage()">💌</div>
         <button class="music-button" onclick="toggleMusic()">🎵 Musiqi Aç/Kapat</button>
+        <button class="next-section" id="nextSectionButton" onclick="showNextSection()">➡️ Daha Çoxunu Gör</button>
     </div>
     <div class="overlay" id="overlay" onclick="closeMessage()"></div>
     <div class="message-container" id="messageContainer">
-        <p>Səni çox sevirəm, Nərmin! 💖</p>
+        <p>Aaa burda da bir ürəkk 💖</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Narcissus_pseudonarcissus_close-up_aka.jpg/800px-Narcissus_pseudonarcissus_close-up_aka.jpg" alt="Daffodil">
         <button onclick="closeMessage()">Bağla</button>
+    </div>
+    <div class="hidden-section" id="hiddenSection">
+        <h2>❤️ Hmm Hmmm Hmm ❤️</h2>
+    <h2>🌿 Kedicik için Şeirlər 🌿</h2>
+    <p>
+        The beauty inside you, and the Earth inside beauty<br>
+        A cycle unbroken, a timeless duty<br>
+        The stars in your eyes and the dawn on the sea<br>
+        Both whisper of wonder, both longing to be<br>
+        The rivers that shimmer, the veins in your skin<br>
+        Each carrying secrets, both flowing within<br>
+        The wind in your laughter, the song of the trees<br>
+        A melody drifting through soft summer breeze<br>
+        The bloom of your kindness, the petals of spring<br>
+        Both open in sunlight, both effortlessly sing<br>
+        The beauty inside you and nature’s embrace<br>
+        A love ever mirrored in time’s endless grace
+    </p>
+
+
+    <p>
+
+    Bəlalı sər dərdə batsın ümmana çevrilsin<br>
+    Dalğalar ox misalı vicdana çevrilsin<br>
+
+    Göylərdən bələklə gələn bəxşişdi sevgi<br>
+    Vay ki, dönüb-dolaşıb nādana çevrilsin!<br>
+
+    Şirin gölməçə sevinc yaşının mənsəbi<br>
+    Təki şəffaf gözdən axıb leysana çevrilsin<br>
+
+    Can sözü düşür, canan sözü düşmür dilə<br>
+    Can dilər ki, can bir gün cānana çevrilsin<br>
+
+    Təzahür etməyə keçməli yeddi qatdan<br>
+    Sonra müqəddəratdan pünhana çevrilsin<br>
+
+    Rəva görür qoca bağban, səadət bağına,<br>
+    Cəhl aparan hər qafil qurbana çevrilsin<br>
+
+    Ey könül, bir dəm belə icazə vermə ki,<br>
+    Hicran oxu yenidən Kənăna çevrilsin
+     
+
+
+
+
+
+      
+    </p>
+</div>
+
+
     </div>
 </body>
 </html>
